@@ -24,10 +24,10 @@ public class Day2 {
         var res = getParsedInput()
                 .entrySet()
                 .stream()
-                .filter(entry -> !entry.getValue()
+                .filter(entry -> entry.getValue()
                         .gameSets
                         .stream()
-                        .anyMatch(gameSets -> gameSets.cubes
+                        .noneMatch(gameSets -> gameSets.cubes
                                 .stream()
                                 .anyMatch(cube -> cube.value > thresholds.get(cube.color))))
                 .map(Map.Entry::getKey)

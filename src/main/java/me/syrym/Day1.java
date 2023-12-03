@@ -1,6 +1,5 @@
 package me.syrym;
 
-import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -10,7 +9,7 @@ import static me.syrym.FileReader.readLinesAsStream;
 
 public class Day1 {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         solvePart2();
     }
 
@@ -26,7 +25,7 @@ public class Day1 {
         System.out.println("RESULT:" + res);
     }
 
-    private static void solvePart2() throws IOException {
+    private static void solvePart2() {
         var map = Map.ofEntries(
                 entry("one", "1"),
                 entry("two", "2"),
